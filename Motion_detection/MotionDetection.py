@@ -12,8 +12,8 @@ ret, Frame2 = cap.read()
 try:
 
     # creating a folder named data
-    if not os.path.exists('data'):
-        os.makedirs('data')
+    if not os.path.exists('Intruders'):
+        os.makedirs('Intruders')
 
     # if not created then raise error
 except OSError:
@@ -34,7 +34,7 @@ while cap.isOpened():
             cv2.rectangle(Frame1, (x, y), (x+w, y+h), (0, 255, 0), 2)
             status = True
             # time.sleep(1)
-            name = './data/frame' + str(currentframe) + '.jpg'
+            name = './Intruders/frame' + str(currentframe) + '.jpg'
             print('Creating...' + name)
 
             cv2.imwrite(name, Frame1)
